@@ -1,3 +1,5 @@
+import Icosahedron from "@/app/ui/icosahedron";
+
 export default function HomePage() {
   return (
     <div className="relative isolate h-dvh overflow-hidden bg-white dark:bg-gray-900">
@@ -71,10 +73,8 @@ export default function HomePage() {
             </a>
           </div>
         </div>
-        <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:mt-0 lg:mr-0 lg:ml-10 lg:max-w-none lg:flex-none xl:ml-32">
-          <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
-            {/* Some component */}
-          </div>
+        <div className="mx-auto mt-16 flex w-full sm:mt-24 lg:mt-0 lg:mr-0 lg:ml-10">
+          <Icosahedron />
         </div>
       </div>
     </div>
