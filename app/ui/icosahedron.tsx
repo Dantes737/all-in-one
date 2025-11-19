@@ -1,11 +1,11 @@
 "use client";
-
 import { useRef } from "react";
+import { Group } from "three";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 
 function SpinningIcosahedron({ speed = 0.5 }: { speed?: number }) {
-  const group = useRef(null);
+  const group = useRef<null | Group>(null);
 
   // rotate the group each frame. delta is seconds since last frame.
   useFrame((_, delta) => {
