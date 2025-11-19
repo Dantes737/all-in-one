@@ -63,7 +63,7 @@ export default function HomePage() {
           <p className="mt-6 text-lg leading-8 text-gray-300">
             This project I&apos;m created with testing purposes. Main
             technologies what I&apos;m using here it&apos;s: Next, Tailwind and
-            ThreeJS. Site hosted on Cloudflare Pages.
+            ThreeJS. Site hosted on Vercel.
           </p>
           <div className="mt-10">
             <Link
