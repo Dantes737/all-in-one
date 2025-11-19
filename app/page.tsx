@@ -1,4 +1,5 @@
 import Icosahedron from "@/app/ui/icosahedron";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -65,12 +66,12 @@ export default function HomePage() {
             ThreeJS. Site hosted on Cloudflare Pages.
           </p>
           <div className="mt-10">
-            <a
-              href="#"
+            <Link
+              href="/playground"
               className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:bg-indigo-500 dark:hover:bg-indigo-400 dark:focus-visible:outline-indigo-500"
             >
               Explore <span aria-hidden="true">→</span>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="mx-auto mt-16 flex w-full sm:mt-24 lg:mt-0 lg:mr-0 lg:ml-10">
