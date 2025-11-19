@@ -49,8 +49,8 @@ export default function HomePage() {
           className="aspect-1108/632 w-277 bg-linear-to-r from-[#80caff] to-[#4f46e5] opacity-20"
         />
       </div>
-      <div className="mx-auto max-w-7xl px-6 pt-10 pb-24 sm:pb-32 lg:flex lg:px-8 lg:py-40">
-        <div className="mx-auto max-w-2xl shrink-0 lg:mx-0 ">
+      <div className="flex items-center px-28">
+        <div className="mx-auto max-w-2xl shrink-0">
           {/* Some component */}
 
           <h1 className="mt-10 text-4xl font-semibold text-center lg:text-start tracking-tight text-white sm:text-6xl">
@@ -74,9 +74,7 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-        <div className="mx-auto mt-16 flex w-full sm:mt-24 lg:mt-0 lg:mr-0 lg:ml-10">
-          <Icosahedron />
-        </div>
+        <Icosahedron />
       </div>
     </div>
   );
