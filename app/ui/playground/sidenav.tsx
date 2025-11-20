@@ -1,18 +1,19 @@
 import Link from "next/link";
 import NavLinks from "@/app/ui/playground/nav-links";
-import Logo from "@/app/ui/logo";
 import { PowerIcon } from "@heroicons/react/24/outline";
+import IcosahedronLogo from "@/app/ui/playground/nav-icosahedron";
+
 // import { signOut } from "@/auth";
 
 export default function SideNav() {
   return (
     <div className="flex h-full flex-col px-3 py-4 md:px-2">
       <Link
-        className="mb-2 flex h-20 items-end justify-start rounded-lg bg-linear-to-br from-[#5db1ee] to-[#3b34c1] opacity-20 p-4 md:h-40"
+        className="mb-2 flex h-20 items-end justify-start rounded-lg shadow-inner bg-linear-to-br from-[#93d2ffa2] to-[#a288ff92]  p-4 md:h-40"
         href="/"
       >
-        <div className="w-32 text-white md:w-40">
-          <Logo />
+        <div className="size-full">
+          <IcosahedronLogo />
         </div>
       </Link>
       <div className="flex grow flex-row justify-between space-x-2 md:flex-col md:space-x-0 md:space-y-2">
