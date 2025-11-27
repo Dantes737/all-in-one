@@ -1,31 +1,27 @@
-// import { gql } from "@apollo/client";
-// import createApolloClient from "@/apollo-client";
+import { gql } from "@apollo/client";
+import createApolloClient from "@/apollo-client";
+import type {
+  Country,
+  GetCountryQuery,
+  GetCountryVariables,
+} from "@/app/types";
 
-interface Country {
-  code: string;
-  name: string;
-  emoji: string;
-}
+const client = createApolloClient();
 
 export async function fetchCountries(): Promise<Country[]> {
-  // const client = createApolloClient();
-  // const { data } = await client.query({
-  //   query: gql`
-  //     query Countries {
-  //       countries {
-  //         code
-  //         name
-  //         emoji
-  //       }
-  //     }
-  //   `,
-  // });
+  const { data } = await client.query<GetCountryQuery, GetCountryVariables>({
+    query: gql`
+      query Countries {
+        countries {
+          code
+          name
+          emoji
+        }
+      }
+    `,
+  });
 
-  // return data.countries.slice(0, 4);
-  return [
-    { code: "US", name: "United States", emoji: "🇺🇸" },
-    { code: "CA", name: "Canada", emoji: "🇨🇦" },
-    { code: "GB", name: "United Kingdom", emoji: "🇬🇧" },
-    { code: "FR", name: "France", emoji: "🇫🇷" },
-  ];
+  if (!data?.countries) return [];
+
+  return data.countries.slice(0, 4);
 }

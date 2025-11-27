@@ -1,9 +1,9 @@
-import { ApolloClient, InMemoryCache } from "@apollo/client";
+import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client";
 
 const createApolloClient = () => {
   return new ApolloClient({
     cache: new InMemoryCache(),
-    link: "https://countries.trevorblades.com",
+    link: new HttpLink({ uri: "https://countries.trevorblades.com" }),
   });
 };
 
